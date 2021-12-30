@@ -36,19 +36,19 @@ func GetCommonResponse(i interface{}) *CommonResponse {
 	var requestId *string
 	var resourceId *string
 
-	if f := reflect.ValueOf(i).Elem().FieldByName("RequestId"); validField(f) {
+	if f := reflect.ValueOf(i).Elem().FieldByName("requestId"); validField(f) {
 		requestId = StringField(f)
 	}
-	if f := reflect.ValueOf(i).Elem().FieldByName("ProjectId"); validField(f) {
+	if f := reflect.ValueOf(i).Elem().FieldByName("projectId"); validField(f) {
 		projectId = StringField(f)
 	}
-	if f := reflect.ValueOf(i).Elem().FieldByName("ResourceId"); validField(f) {
+	if f := reflect.ValueOf(i).Elem().FieldByName("resourceId"); validField(f) {
 		resourceId = StringField(f)
 	}
 	return &CommonResponse{
-		RequestId:     requestId,
-		ProjectId:    projectId,
-		ResourceId: resourceId,
+		requestId:     requestId,
+		projectId:    projectId,
+		resourceId: resourceId,
 	}
 }
 
