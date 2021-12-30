@@ -7,6 +7,8 @@ import (
 
 func main() {
 	plugin.Serve(&plugin.ServeOpts{
-	  ProviderFunc: scp.Provider,
-	}),
+	  ProviderFunc:	func() *schema.Provider {
+			return scp.Provider()
+		},
+	})
 }
