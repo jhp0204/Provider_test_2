@@ -105,8 +105,7 @@ func resourceScpVpcRead(d *schema.ResourceData, meta interface{}) error {
 	fmt.println("resourceScpVpcRead function is begin")	
 	config := meta.(*ProviderConfig)
 
-	instance, err := 
-	(config, d.Id())
+	instance, err := (config, d.Id())
 	if err != nil {
 		return err
 	}
