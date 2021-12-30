@@ -29,7 +29,7 @@ type ScpAPIClient struct {
 
 // ncloud sdk 부분 변경 필요
 func (c *Config) Client() (*ScpAPIClient, error) {
-	apiKey := &ncloud.APIKey{
+	apiKey := &scp-clilib.APIKey{
 		AccessKey: c.AccessKey,
 		SecretKey: c.SecretKey,
 	}
