@@ -13,7 +13,7 @@ import (
 
 	"strings"
 
-	"github.com/jhp0204/Provider_test1/scp-clilib/"
+	"github.com/jhp0204/Provider_test1/scp-clilib"
 )
 
 const (
